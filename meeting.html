@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berkume Hotel Meeting Room Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    .container {
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    label {
+        display: block;
+        margin: 10px 0 5px;
+    }
+    
+    input, select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #218838;
+    }
+    
+    .account-number {
+        margin-top: 10px;
+        font-weight: bold;
+    }</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Berkume Hotel Meeting Room Booking Form</h1>
+        <form id="bookingForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required>
+            <label for="size">Number of Attended on program:</label>
+            <input type="number" id="size" min="1" required>
+
+
+            <label for="date">Date of program:</label>
+            <input type="date" id="date" required>
+
+            <label for="payment">Payment Method:</label>
+            <select id="payment" required>
+                <option value="">Select Payment Method</option>
+                <option value="CBE">CBE</option>
+                <option value="Awash Bank">Awash Bank</option>
+                <option value="Oromia Bank">Oromia Bank</option>
+                <option value="Tele Birr">Tele Birr</option>
+            </select>
+
+            <div id="accountNumber" class="account-number"></div>
+
+            <label for="screenshot">Upload Screenshot of Payment Input:</label>
+            <input type="file" id="screenshot" accept="image/*" required>
+
+           
+            <button type="submit">Submit Booking</button>
+        </form>
+        <div id="message"></div>
+    </div>
+
+    <script>document.getElementById('payment').addEventListener('change', function() {
+        const accountNumberDiv = document.getElementById('accountNumber');
+        const selectedPayment = this.value;
+    
+        switch (selectedPayment) {
+            case 'CBE':
+                accountNumberDiv.innerText = "Account Number: 138374844838";
+                break;
+            case 'Awash Bank':
+                accountNumberDiv.innerText = "Account Number: 99373737";
+                break;
+                case 'Oromia Bank':
+                accountNumberDiv.innerText = "Account Number: 99373737";
+                break;
+            case 'Tele Birr':
+                accountNumberDiv.innerText = "Phone Number: 0925082938";
+                break;
+            default:
+                accountNumberDiv.innerText = "";
+        }
+    });
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent form submission
+    
+        // Basic form validation
+        const name = document.getElementById('name').value;
+        const address = document.getElementById('address').value;
+        const phone = document.getElementById('phone').value;
+        const date = document.getElementById('date').value;
+        const payment = document.getElementById('payment').value;
+        const screenshot = document.getElementById('screenshot').files.length > 0; // Check if file is uploaded
+        const size = document.getElementById('size').value;
+    
+        if (name && address && phone && date && payment && screenshot && size) {
+            document.getElementById('message').innerText = "Booking submitted successfully!";
+            // Here you can add code to handle the form submission (e.g., send to server)
+            // Reset the form if needed
+            this.reset();
+            document.getElementById('accountNumber').innerText = ""; // Clear account number display
+        } else {
+            document.getElementById('message').innerText = "Please fill out all fields.";
+        }
+    });
+    </script>
+    
+
+</body>
+</html>

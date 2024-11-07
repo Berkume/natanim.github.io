@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Welcome To Berkume Hotel">
+     <meta name="keywords" content="hotel, barkume">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #nam{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .contain {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+        .service-icon {
+            font-size: 40px;
+            color: #28a745;
+            margin-bottom: 15px;
+        }
+        h3 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="container">
+               
+                <h1 class="log"><a href="barkume.html"></a><span class="am"> <i class="fas fa-hotel fa-2x"></i><br>በርኩሜ</span> ሆቴል<span class="logo"></span><br>Berkume<span class="logo"><Berkume</span> Hotel</h1>   
+         <ul>
+            <li><a href="barkume.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a  class="current"  href="service.html">Service</a></li>
+           
+          
+         </ul>
+        
+            </div>
+            
+        </nav>
+
+        <section id="nam">
+    <div class="bn"><h1>Our Hotel Services</h1></div>
+
+    <div class="contain">
+
+        <div class="service-card">
+            <i class="fas fa-users service-icon"></i>
+            <h3>Meetings</h3>
+            <img src="vip.jpg" width="340"  height="250">
+            <p>Host professional meetings in our 4well-equipped conference rooms.</p>
+            <button><a href="meeting.html">Book Now</a>
+            
+            </button>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-gift service-icon"></i>
+            <h3>Weddings</h3>
+            <img src="cheer.jpg" width="340"  height="250">
+            <p>Make your special day unforgettable with our wedding packages.</p>
+            <a href="meeting.html"><button>Inquire Now</button></a>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-birthday-cake service-icon"></i>
+            <h3>Birthdays</h3>
+            <img src="birth.jpg" width="340"  height="250">
+            <p>Celebrate your birthday with exclusive services and decorations.</p>
+            <button>Plan Your Party</button>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-crown service-icon"></i>
+            <h3>VIP Services</h3>
+            <img src="vp.jpg" width="340"  height="250">
+            <p>Experience luxury with our dedicated VIP services.</p>
+            <a href="meeting.html"><button>Learn More</button>
+            </a>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-star service-icon"></i>
+            <h3>Special Ceremonies</h3>
+            <img src="two.jpg" width="340"  height="250">
+            <p>Host your special ceremonies with elegance and style.</p>
+            <a href="meeting.html"><button>Contact Us</button></a>
+        </div>
+
+        <!-- New Services -->
+        <div class="service-card">
+            <i class="fas fa-carrot service-icon"></i>
+            <h3>Cow Meat Delivery</h3>
+            <img src="meat.jpg" width="340"  height="250">
+            <p>Fresh cow meat delivered straight to your door.</p>
+            <a href="meeting.html"><button>Order Now</button></a>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-beer service-icon"></i>
+            <h3>Alcohol Drinks</h3>
+            <img src="alc.jpg" width="340"  height="250">
+            <p>A wide selection of alcoholic beverages available for delivery.</p>
+            <a href="meeting.html"><button>Browse Drinks</button></a>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-coffee service-icon"></i>
+            <h3>Café Options</h3>
+            <img src="cofe.jpg" width="340"  height="250">
+            <p>Enjoy our café offerings for dine-in or takeaway.</p>
+            <a href="meeting.html"><button>View Menu</button></a>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-glass-whiskey service-icon"></i>
+            <h3>Soft Drinks</h3>
+            <img src="soft.jpg" width="340"  height="250">
+            <p>Refreshing soft drinks available for delive</p>
+            <a href="meeting.html"><button>Order Soft Drinks</button></a>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-utensils service-icon"></i>
+            <h3>Takeaway Food</h3>
+            <img src="takeaway.jpg" width="340"  height="250">
+            <p>Delicious meals ready for takeaway at your convenience.</p>
+            <a href="meeting.html"><button>Order Takeaway</button></a>
+        </div>
+    </div>
+</section>
+
+<footer id="main">
+ <p>Berkume Hotel &copy, All Reserved</p>
+ </footer>
+ 
+</body>
+</html>
